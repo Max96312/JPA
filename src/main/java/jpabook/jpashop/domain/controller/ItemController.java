@@ -70,6 +70,8 @@ public class ItemController {
         book.setId(form.getId());
         book.setName(form.getName());
         book.setPrice(form.getPrice());
+//        book.setPrice(form.getPrice());
+//        em.merge를 사용하면 price가 null이 들어갈 위험이 존재한다.
         book.setStockQuantity(form.getStockQuantity());
         book.setAuthor(form.getAuthor());
         book.setIsbn(form.getIsbn());
