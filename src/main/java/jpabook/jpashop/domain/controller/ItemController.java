@@ -3,6 +3,7 @@ package jpabook.jpashop.domain.controller;
 import jpabook.jpashop.domain.item.Book;
 import jpabook.jpashop.domain.item.Item;
 import jpabook.jpashop.service.ItemService;
+import jpabook.jpashop.service.UpdateItemDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -79,4 +80,11 @@ public class ItemController {
         itemService.saveItem(book);
         return "redirect:/items";
     }
+
+    // 유지보수가 편리한 update 코드
+//        @PostMapping("items/{itemId}/edit")
+//        public String updateItem(@PathVariable Long itemId, UpdateItemDto form) {
+//            itemService.updateItem(itemId, form);
+//            return "redirect:/items";
+//    }
 }

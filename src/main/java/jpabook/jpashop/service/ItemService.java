@@ -20,13 +20,13 @@ public class ItemService {
         itemRepository.save(item);
     }
 
-//    @Transactional
-//    public void updateItem(Long itemId, Book bookParam){
-//        Item findItem = itemRepository.findOne(itemId);
-//        findItem.setPrice(bookParam.getPrice());
-//        findItem.setName(bookParam.getName());
-//        findItem.setStockQuantity(bookParam.getStockQuantity());
-//    }
+    @Transactional
+    public void updateItem(Long itemId, UpdateItemDto form){
+        Item findItem = itemRepository.findOne(itemId);
+        findItem.setPrice(form.getPrice());
+        findItem.setName(form.getName());
+        findItem.setStockQuantity(form.getStockQuantity());
+    }
 
     public List<Item> findAll() {
         return itemRepository.findAll();
