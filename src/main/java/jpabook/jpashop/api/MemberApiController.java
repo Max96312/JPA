@@ -1,4 +1,4 @@
-package jpabook.jpashop.domain.api;
+package jpabook.jpashop.api;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotEmpty;
